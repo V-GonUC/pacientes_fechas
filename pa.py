@@ -9,8 +9,8 @@
 # Regla: 
 # 1) Solo 1 encargado por fila encargado de hacer push/pull
 
-mes_a_revisar = input("Ingrese el mes que quiere revisar: ").capitalize
-print (f"{mes_a_revisar}")
+mes_a_revisar = input("Ingrese el mes que quiere revisar: ")
+
 fechas_registro = {
     "Enero": [],
     "Febrero": [],
@@ -27,9 +27,10 @@ fechas_registro = {
 }
 
 def pacientes(mes_a_revisar):
+
     if mes_a_revisar in fechas_registro:
         cantidad_registro = len(fechas_registro[mes_a_revisar])
-        print("Cantidad de pacientes:", cantidad_registro)
+        print(f"Cantidad de pacientes en {mes_a_revisar}:", cantidad_registro)
     else:
         print("El mes ingresado no es válido.")
 
